@@ -3,6 +3,7 @@ language: ruby
 rvm:
 - 2.5.5
 - 2.6.3
+- 2.7.2
 before_install:
 - rvm use @global
 - gem uninstall bundler -x || true
@@ -13,10 +14,8 @@ script:
 - bundle exec rake spec
 - bundle exec rubocop --fail-level C
 gemfile:
-- gemfiles/rails_5.2.3_activeadmin_2.1.0_reform_2.3.0.rc1_reform_rails_0.2.0.rc2_bootsnap_1.3.1.gemfile
-- gemfiles/rails_5.2.3_activeadmin_2.0.0_reform_2.2.4_reform_rails_0.1.7_bootsnap_1.3.1.gemfile
-- gemfiles/rails_5.2.3_activeadmin_2.1.0_reform_2.2.4_reform_rails_0.1.7_bootsnap_1.3.1.gemfile
-- gemfiles/rails_4.2.11.1_activeadmin_1.4.3_reform_2.2.4_reform_rails_0.1.7.gemfile
+- gemfiles/rails_5.2.6_activeadmin_2.9.0_reform_2.6.0_reform_rails_0.2.3_bootsnap_1.8.1.gemfile
+- gemfiles/rails_6.1.4.1_activeadmin_2.9.0_reform_2.6.0_reform_rails_0.2.3_bootsnap_1.8.1.gemfile
 addons:
   code_climate:
     repo_token: c326cca5984d0e32d2c6b5d9b985756ee9312f63fc6a9480fc9cfa55c454d68a

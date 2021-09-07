@@ -1,12 +1,10 @@
 require 'yaml'
 
-ruby_versions = %w(2.5.5 2.6.3)
+ruby_versions = %w(2.5.5 2.6.3 2.7.2)
 
 [
-  { rails: '4.2.11.1', activeadmin: '1.4.3', reform: '2.2.4', 'reform-rails': '0.1.7' },
-  { rails: '5.2.3', activeadmin: '2.0.0', reform: '2.2.4', 'reform-rails': '0.1.7', bootsnap: '1.3.1' },
-  { rails: '5.2.3', activeadmin: '2.1.0', reform: '2.2.4', 'reform-rails': '0.1.7', bootsnap: '1.3.1' },
-  { rails: '5.2.3', activeadmin: '2.1.0', reform: '2.3.0.rc1', 'reform-rails': '0.2.0.rc2', bootsnap: '1.3.1' },
+  { rails: '5.2.6', activeadmin: '2.9.0', reform: '2.6.0', 'reform-rails': '0.2.3', bootsnap: '1.8.1' },
+  { rails: '6.1.4.1', activeadmin: '2.9.0', reform: '2.6.0', 'reform-rails': '0.2.3', bootsnap: '1.8.1' },
 ].each do |deps|
   appraise deps.map { |name, requirement| "#{name}-#{requirement}" }.join('_') do
     deps.each { |name, requirement| gem name, requirement }

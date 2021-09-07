@@ -18,22 +18,24 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'rails', ['>= 4.0.0', '< 6.0']
-  spec.add_dependency 'activeadmin', ['>= 1.4.3', '< 3.0']
-  spec.add_dependency 'disposable', '>= 0.2.0'
-  spec.add_dependency 'reform', '<= 2.3.0.rc2'
-  spec.add_dependency 'reform-rails', '<= 0.2.0.rc2'
+  spec.add_dependency 'rails', ['>= 5.0', '< 7.0']
+  spec.add_dependency 'activeadmin', ['>= 2.1.0', '< 3.0']
+  spec.add_dependency 'disposable', '>= 0.5.0'
+  spec.add_dependency 'reform', '~> 2.6.0'
+  spec.add_dependency 'reform-rails', '~> 0.2.3'
 
-  spec.add_development_dependency 'appraisal', '2.2.0'
-  spec.add_development_dependency 'bundler', '~> 1.17.3'
-  spec.add_development_dependency 'capybara', '2.17.0'
-  spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.4.8'
+  spec.add_dependency 'bootsnap'
+
+  spec.add_development_dependency 'appraisal', '2.4.1'
+  spec.add_development_dependency 'bundler', '~> 2.2.15'
+  spec.add_development_dependency 'capybara', '3.35.3'
+  spec.add_development_dependency 'codeclimate-test-reporter', '~> 1.0.9'
   spec.add_development_dependency 'database_cleaner'
-  spec.add_development_dependency 'launchy', '~> 2.4.3'
+  spec.add_development_dependency 'launchy', '~> 2.5.0'
   spec.add_development_dependency 'poltergeist'
-  spec.add_development_dependency 'rake', '~> 12.3'
-  spec.add_development_dependency 'rspec', '~> 3.4'
+  spec.add_development_dependency 'rake', '~> 13.0.6'
+  spec.add_development_dependency 'rspec', '~> 3.10'
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'spbtv_code_style', '~> 1.4.1'
-  spec.add_development_dependency 'sqlite3', '~> 1.3.11'
+  spec.add_development_dependency 'sqlite3', '~> 1.4.2'
 end
