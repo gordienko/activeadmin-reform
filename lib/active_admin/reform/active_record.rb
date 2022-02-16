@@ -1,5 +1,4 @@
 require 'reform'
-require 'reform/form/active_record'
 require 'reform/form/active_model/model_reflections'
 
 module ActiveAdmin

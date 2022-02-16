@@ -10,6 +10,6 @@ task :setup do
   source_path = 'spec/dummy'
   template = 'spec/support/rails_template.rb'
   system <<-BASH
-    bundle exec rails new #{source_path} -m #{template} --skip-spring --skip-git --skip-turbolinks --skip-test-unit
+    bundle exec rails new #{source_path} -m #{template} --skip-spring --skip-bootsnap --skip-git --skip-turbolinks --skip-test-unit
   BASH
 end

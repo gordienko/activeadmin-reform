@@ -31,7 +31,7 @@ do_after_bundle = lambda do
       has_many :comments
     RUBY
   end
-  generate :'active_admin:install --skip-users'
+  generate :'active_admin:install --skip-users --skip-bootsnap'
   rake 'db:migrate'
 
   copy_file(File.expand_path('../../templates/author_form.rb', __FILE__), 'app/models/author_form.rb')
