@@ -25,7 +25,11 @@ module ActiveAdmin
         include ::Reform::Form::ModelReflections
         include ::Reform::Form::ActiveRecord
 
-        validate { model.errors.each { |key, error| errors.add key, error } }
+        if ::ActiveRecord::VERSION::MAJOR < 6
+          validate { model.errors.each { |key, error| errors.add key, error } }
+        else
+          validate { model.errors.each { |error| errors.add error.attribute, error.message } }
+        end
 
         class << self
           def reflect_on_association(name)
